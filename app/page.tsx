@@ -68,8 +68,8 @@ export default function Home() {
                     key={item}
                     href={`#${sections[index]}`}
                     className={`text-sm font-semibold transition-all duration-300 ${activeSection === sections[index]
-                        ? 'text-blue-400'
-                        : 'text-slate-300 hover:text-white'
+                      ? 'text-orange-400'
+                      : 'text-slate-300 hover:text-white'
                       }`}
                   >
                     {item}
@@ -114,7 +114,7 @@ export default function Home() {
       <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-5xl mx-auto text-center fade-in-up">
           <div className="mb-8 float">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 p-1 shadow-2xl shadow-blue-500/50">
+            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-orange-500 via-teal-500 to-cyan-500 p-1 shadow-2xl shadow-orange-500/50">
               <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-6xl">
                 💼
               </div>
@@ -186,7 +186,7 @@ export default function Home() {
               <div key={idx} className="pro-card p-8">
                 <div className="flex justify-between mb-4">
                   <span className="font-bold text-lg text-white">{skill.name}</span>
-                  <span className="text-blue-400 font-semibold">{skill.level}%</span>
+                  <span className="text-orange-400 font-semibold">{skill.level}%</span>
                 </div>
                 <div className="skill-bar">
                   <div
@@ -210,14 +210,14 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
               <div key={idx} className="pro-card p-8 group">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-teal-500 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   📱
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors">{project.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
-                    <span key={i} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-slate-300 hover:border-blue-500/50 transition-colors">
+                    <span key={i} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-slate-300 hover:border-orange-500/50 transition-colors">
                       {tech}
                     </span>
                   ))}
@@ -241,7 +241,7 @@ export default function Home() {
                 <label className="block text-sm font-semibold mb-3 text-slate-300">Nombre</label>
                 <input
                   type="text"
-                  className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-white placeholder-slate-500"
+                  className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all text-white placeholder-slate-500"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -249,7 +249,7 @@ export default function Home() {
                 <label className="block text-sm font-semibold mb-3 text-slate-300">Email</label>
                 <input
                   type="email"
-                  className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-white placeholder-slate-500"
+                  className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all text-white placeholder-slate-500"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -276,7 +276,7 @@ export default function Home() {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 text-slate-400 hover:text-blue-400 transition-colors group"
+                  className="flex flex-col items-center gap-2 text-slate-400 hover:text-orange-400 transition-colors group"
                   title={social.name}
                 >
                   <div className="text-3xl group-hover:scale-110 transition-transform">{social.icon}</div>
