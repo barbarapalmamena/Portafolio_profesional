@@ -64,16 +64,19 @@ export default function Home() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex gap-8">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={`transition-all duration-300 ${activeSection === item.toLowerCase() ? 'text-indigo-400 font-semibold' : 'text-slate-300 hover:text-indigo-400'
-                    }`}
-                >
-                  {item}
-                </a>
-              ))}
+              {['Inicio', 'Sobre Mí', 'Habilidades', 'Proyectos', 'Contacto'].map((item, index) => {
+                const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+                return (
+                  <a
+                    key={item}
+                    href={`#${sections[index]}`}
+                    className={`transition-all duration-300 ${activeSection === sections[index] ? 'text-indigo-400 font-semibold' : 'text-slate-300 hover:text-indigo-400'
+                      }`}
+                  >
+                    {item}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Mobile Menu Button */}
@@ -90,16 +93,19 @@ export default function Home() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-300 hover:text-primary transition-colors"
-                >
-                  {item}
-                </a>
-              ))}
+              {['Inicio', 'Sobre Mí', 'Habilidades', 'Proyectos', 'Contacto'].map((item, index) => {
+                const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+                return (
+                  <a
+                    key={item}
+                    href={`#${sections[index]}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-slate-300 hover:text-indigo-400 transition-colors"
+                  >
+                    {item}
+                  </a>
+                );
+              })}
             </div>
           )}
         </div>
