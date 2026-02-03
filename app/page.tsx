@@ -57,10 +57,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold gradient-text">BP</h1>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 bg-clip-text text-transparent">BP</h1>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex gap-8">
@@ -68,7 +68,7 @@ export default function Home() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className={`transition-all duration-300 hover:text-primary ${activeSection === item.toLowerCase() ? 'text-primary font-semibold' : 'text-gray-300'
+                  className={`transition-all duration-300 ${activeSection === item.toLowerCase() ? 'text-indigo-400 font-semibold' : 'text-slate-300 hover:text-indigo-400'
                     }`}
                 >
                   {item}
@@ -108,25 +108,35 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="fade-in">
-            <div className="mb-6 float-animation">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1">
-                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-6xl">
+          <div className="animate-fade-in">
+            <div className="mb-8 inline-block animate-bounce-slow">
+              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-indigo-500 via-pink-500 to-teal-500 p-1 shadow-2xl shadow-indigo-500/50">
+                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-7xl">
                   👨‍💻
                 </div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Hola, soy <span className="gradient-text">Barbara Palma</span>
+            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight">
+              Hola, soy{' '}
+              <span className="bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 bg-clip-text text-transparent animate-gradient">
+                Barbara Palma
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-3xl text-slate-400 mb-10 max-w-4xl mx-auto font-light">
               Desarrolladora Full Stack apasionada por crear experiencias web excepcionales
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <a href="#projects" className="btn-primary">
-                Ver Proyectos
+            <div className="flex gap-6 justify-center flex-wrap">
+              <a
+                href="#projects"
+                className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50"
+              >
+                <span className="relative z-10">Ver Proyectos</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-              <a href="#contact" className="glass px-8 py-3 rounded-xl hover:bg-white/10 transition-all">
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-white/5 backdrop-blur-lg border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              >
                 Contactar
               </a>
             </div>
@@ -137,16 +147,18 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-            Sobre Mí
+          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center">
+            <span className="bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 bg-clip-text text-transparent">
+              Sobre Mí
+            </span>
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="glass p-8 rounded-2xl card-hover">
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20">
+              <p className="text-lg text-slate-300 leading-relaxed mb-6">
                 Soy una desarrolladora apasionada con experiencia en la creación de aplicaciones web modernas y escalables.
                 Me especializo en tecnologías frontend y backend, siempre buscando las mejores prácticas y soluciones innovadoras.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed">
                 Mi enfoque está en crear interfaces de usuario intuitivas y experiencias digitales que marquen la diferencia.
                 Me encanta aprender nuevas tecnologías y enfrentar desafíos complejos.
               </p>
@@ -158,10 +170,13 @@ export default function Home() {
                 { icon: '💡', title: 'Creativa', desc: 'Soluciones únicas' },
                 { icon: '🤝', title: 'Colaborativa', desc: 'Trabajo en equipo' },
               ].map((item, idx) => (
-                <div key={idx} className="glass p-6 rounded-xl card-hover text-center">
-                  <div className="text-4xl mb-3">{item.icon}</div>
-                  <h3 className="font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
+                <div
+                  key={idx}
+                  className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-500/20 text-center group"
+                >
+                  <div className="text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-slate-400">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -172,23 +187,28 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-20">
         <div className="max-w-7xl mx-auto w-full">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-            Habilidades
+          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center">
+            <span className="bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 bg-clip-text text-transparent">
+              Habilidades
+            </span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, idx) => (
-              <div key={idx} className="glass p-6 rounded-xl card-hover">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">{skill.icon}</span>
-                  <h3 className="text-xl font-bold">{skill.name}</h3>
+              <div
+                key={idx}
+                className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20 group"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{skill.icon}</span>
+                  <h3 className="text-2xl font-bold">{skill.name}</h3>
                 </div>
-                <div className="relative h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div className="relative h-4 bg-slate-800/50 rounded-full overflow-hidden backdrop-blur-sm">
                   <div
-                    className="absolute top-0 left-0 h-full animated-gradient rounded-full transition-all duration-1000"
+                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 rounded-full transition-all duration-1000 ease-out"
                     style={{ width: `${skill.level}%` }}
                   />
                 </div>
-                <p className="text-right text-sm text-gray-400 mt-2">{skill.level}%</p>
+                <p className="text-right text-sm text-slate-400 mt-3 font-semibold">{skill.level}%</p>
               </div>
             ))}
           </div>
@@ -198,20 +218,25 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20">
         <div className="max-w-7xl mx-auto w-full">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-            Proyectos Destacados
+          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center">
+            <span className="bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 bg-clip-text text-transparent">
+              Proyectos Destacados
+            </span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
-              <div key={idx} className="glass p-6 rounded-xl card-hover group">
-                <div className={`h-48 bg-gradient-to-br ${project.color} rounded-lg mb-6 flex items-center justify-center text-6xl group-hover:scale-105 transition-transform`}>
+              <div
+                key={idx}
+                className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20 group overflow-hidden"
+              >
+                <div className={`h-52 bg-gradient-to-br ${project.color} rounded-xl mb-6 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   💼
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">{project.title}</h3>
+                <p className="text-slate-400 mb-5 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
-                    <span key={i} className="px-3 py-1 bg-white/10 rounded-full text-sm">
+                    <span key={i} className="px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 rounded-full text-sm font-medium hover:scale-105 transition-transform">
                       {tech}
                     </span>
                   ))}
@@ -225,47 +250,60 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center px-6 py-20">
         <div className="max-w-4xl mx-auto w-full">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">
-            Contacto
+          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center">
+            <span className="bg-gradient-to-r from-indigo-500 via-pink-500 to-teal-500 bg-clip-text text-transparent">
+              Contacto
+            </span>
           </h2>
-          <div className="glass p-8 md:p-12 rounded-2xl">
+          <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-10 md:p-14 rounded-3xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300">
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Nombre</label>
+                <label className="block text-sm font-semibold mb-3 text-slate-300">Nombre</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-5 py-4 bg-slate-800/50 border border-white/10 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all text-white placeholder-slate-500"
                   placeholder="Tu nombre"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label className="block text-sm font-semibold mb-3 text-slate-300">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-5 py-4 bg-slate-800/50 border border-white/10 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all text-white placeholder-slate-500"
                   placeholder="tu@email.com"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Mensaje</label>
+                <label className="block text-sm font-semibold mb-3 text-slate-300">Mensaje</label>
                 <textarea
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
+                  rows={6}
+                  className="w-full px-5 py-4 bg-slate-800/50 border border-white/10 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none text-white placeholder-slate-500"
                   placeholder="Tu mensaje..."
                 />
               </div>
-              <button type="submit" className="btn-primary w-full">
-                Enviar Mensaje
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 group relative"
+              >
+                <span className="relative z-10">Enviar Mensaje</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </form>
-            <div className="mt-8 flex justify-center gap-6">
-              {['GitHub', 'LinkedIn', 'Twitter'].map((social) => (
+            <div className="mt-10 flex justify-center gap-6">
+              {[
+                { name: 'GitHub', icon: '💻', link: 'https://github.com/barbarapalmamena' },
+                { name: 'LinkedIn', icon: '💼', link: '#' },
+                { name: 'Twitter', icon: '🐦', link: '#' },
+              ].map((social) => (
                 <a
-                  key={social}
-                  href="#"
-                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-all hover:scale-110"
+                  key={social.name}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 bg-white/5 backdrop-blur-lg border border-white/10 rounded-full flex items-center justify-center hover:bg-white/10 transition-all hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/30 text-2xl"
+                  title={social.name}
                 >
-                  {social[0]}
+                  {social.icon}
                 </a>
               ))}
             </div>
