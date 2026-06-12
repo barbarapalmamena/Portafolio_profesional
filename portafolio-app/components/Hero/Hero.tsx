@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { FaDownload } from "react-icons/fa";
 import styles from "./Hero.module.css";
 
 /* Textos del efecto typewriter */
@@ -95,6 +96,15 @@ export default function Hero() {
             >
               Contacto
             </button>
+            <a
+              id="hero-cta-cv"
+              className="btn btn-outline"
+              href="/Bárbara_Palma_CV.pdf"
+              download="Barbara_Palma_CV.pdf"
+              style={{ display: "inline-flex", gap: "0.5rem" }}
+            >
+              <FaDownload aria-hidden="true" /> Descargar CV
+            </a>
           </div>
         </div>
 

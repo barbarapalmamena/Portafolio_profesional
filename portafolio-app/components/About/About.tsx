@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { FaDownload } from "react-icons/fa";
 import styles from "./About.module.css";
 
 /* Tags de valores personales/profesionales */
@@ -79,6 +80,11 @@ export default function About() {
               Siempre priorizo el código limpio y las buenas prácticas.
             </p>
 
+            <p className={styles.intro}>
+              Además, tengo un fuerte interés en <strong>ciberseguridad y redes</strong>,
+              habiéndome capacitado en estas áreas y participado activamente en competencias de hacking ético como el <strong>CTF FIDAE 2026</strong>.
+            </p>
+
             {/* Stats */}
             <div className={styles.stats}>
               <div className={styles.statItem}>
@@ -102,6 +108,19 @@ export default function About() {
                   {tag}
                 </span>
               ))}
+            </div>
+
+            {/* Descargar CV */}
+            <div style={{ marginTop: "2rem" }}>
+              <a
+                id="about-cv-button"
+                className="btn btn-primary"
+                href="/Bárbara_Palma_CV.pdf"
+                download="Barbara_Palma_CV.pdf"
+                style={{ display: "inline-flex", gap: "0.5rem" }}
+              >
+                <FaDownload aria-hidden="true" /> Descargar CV
+              </a>
             </div>
           </div>
         </div>
