@@ -66,15 +66,17 @@ export default function About() {
 
             <p className={styles.intro}>
               Soy <strong>Bárbara Javiera Palma Mena</strong>, estudiante de{" "}
-              <strong>Ingeniería en Informática</strong> apasionada por el
-              desarrollo web frontend. Me especializo en crear interfaces{" "}
-              <strong>modernas, accesibles y con gran experiencia de usuario</strong>.
+              <strong>Ingeniería en Informática con mención en Ciencia de Datos</strong>.
+              Me apasiona el desarrollo web frontend y el análisis inteligente de datos,
+              combinando ambos mundos para crear soluciones{" "}
+              <strong>modernas, accesibles y basadas en datos</strong>.
             </p>
 
             <p className={styles.intro}>
-              Trabajo con tecnologías como <strong>React, Next.js y CSS moderno</strong>,
-              siempre priorizando el código limpio, el rendimiento y las buenas prácticas.
-              Disfruto enfrentar nuevos desafíos y aprender constantemente.
+              En frontend trabajo con <strong>React, Next.js y CSS moderno</strong>.
+              En ciencia de datos uso <strong>Python, Scikit-learn, TensorFlow y Pandas</strong>,
+              aplicando Machine Learning y Deep Learning a problemas reales.
+              Siempre priorizo el código limpio y las buenas prácticas.
             </p>
 
             {/* Stats */}

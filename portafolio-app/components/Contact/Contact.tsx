@@ -122,7 +122,7 @@ export default function Contact() {
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>🎓</span>
-                <span>Ingeniería en Informática</span>
+                <span>Ingeniería en Informática — Mención Ciencia de Datos</span>
               </div>
             </div>
 

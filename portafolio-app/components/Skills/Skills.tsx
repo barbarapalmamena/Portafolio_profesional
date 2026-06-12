@@ -37,6 +37,24 @@ const SKILL_CATEGORIES = [
       { name: "GitHub", icon: "🐙", level: 50 },
     ],
   },
+  {
+    title: "Ciencia de Datos & ML",
+    skills: [
+      { name: "Python",          icon: "🐍", level: 75 },
+      { name: "SQL",             icon: "🗄️", level: 75 },
+      { name: "Pandas",          icon: "🐼", level: 75 },
+      { name: "NumPy",           icon: "🔢", level: 75 },
+      { name: "Matplotlib",      icon: "📊", level: 75 },
+      { name: "Scikit-learn",    icon: "🤖", level: 75 },
+      { name: "TensorFlow",      icon: "🧠", level: 75 },
+      { name: "Jupyter",         icon: "📓", level: 75 },
+      { name: "Machine Learning",icon: "⚙️", level: 75 },
+      { name: "Deep Learning",   icon: "🔬", level: 75 },
+      { name: "Estadística",     icon: "📈", level: 75 },
+      { name: "Excel avanzado",  icon: "📗", level: 50 },
+      { name: "Data Wrangling",  icon: "🧹", level: 75 },
+    ],
+  },
 ];
 
 /**
