@@ -10,7 +10,7 @@ const PROJECTS = [
     title: "Simulación de Automotora",
     description:
       "Sitio web profesional de venta de vehículos en Puerto Montt y la Décima Región. Incluye un catálogo dinámico con filtros de búsqueda por marca, categoría y presupuesto, secciones informativas de garantía ética de 7 días, inspección rigurosa y un panel de administración.",
-    image: "/public/images/project-automotora.png",
+    image: "/images/project-automotora.png",
     tech: ["Next.js", "React", "TypeScript", "CSS Modules"],
     status: "completed" as const,
     demoUrl: "https://automotora-eight.vercel.app/",
