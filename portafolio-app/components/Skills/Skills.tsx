@@ -1,15 +1,15 @@
 "use client";
 
 import {
-  SiHtml5, SiCss3, SiJavascript, SiTypescript,
+  SiHtml5, SiCss, SiJavascript, SiTypescript,
   SiReact, SiNextdotjs, SiTailwindcss,
   SiCssmodules,
   SiGit, SiGithub,
   SiPython, SiMysql, SiPandas, SiNumpy,
   SiScikitlearn, SiTensorflow, SiJupyter,
-  SiMicrosoftexcel, SiBootstrap
+  SiBootstrap
 } from "react-icons/si";
-import { FaChartBar, FaRobot, FaBrain, FaMobileAlt, FaBroom, FaStar } from "react-icons/fa";
+import { FaChartBar, FaRobot, FaBrain, FaMobileAlt, FaBroom, FaStar, FaFileExcel } from "react-icons/fa";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Skills.module.css";
 import type { IconType } from "react-icons";
@@ -33,7 +33,7 @@ const SKILL_CATEGORIES: Category[] = [
     title: "Frontend Core",
     skills: [
       { name: "HTML5",      Icon: SiHtml5,       level: 75, color: "#E34F26" },
-      { name: "CSS3",       Icon: SiCss3,        level: 75, color: "#1572B6" },
+      { name: "CSS3",       Icon: SiCss,        level: 75, color: "#1572B6" },
       { name: "JavaScript", Icon: SiJavascript,  level: 50, color: "#F7DF1E" },
       { name: "TypeScript", Icon: SiTypescript,  level: 50, color: "#3178C6" },
       { name: "Responsive", Icon: FaMobileAlt,   level: 75, color: "#AFA9EC" },
@@ -76,7 +76,7 @@ const SKILL_CATEGORIES: Category[] = [
       { name: "Machine Learning",Icon: FaRobot,       level: 75, color: "#7F77DD" },
       { name: "Deep Learning",   Icon: FaBrain,       level: 75, color: "#AFA9EC" },
       { name: "Estadística",     Icon: FaChartBar,    level: 75, color: "#4ade80" },
-      { name: "Excel avanzado",  Icon: SiMicrosoftexcel, level: 50, color: "#217346" },
+      { name: "Excel avanzado",  Icon: FaFileExcel,       level: 50, color: "#217346" },
       { name: "Data Wrangling",  Icon: FaBroom,       level: 75, color: "#AFA9EC" },
     ],
   },
