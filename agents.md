@@ -49,7 +49,7 @@ Todos los commits **deben** seguir la especificación [Conventional Commits](htt
 
 Usa el nombre de la sección o módulo afectado:
 
-`hero` · `about` · `projects` · `skills` · `contact` · `navbar` · `footer` · `seo` · `animations` · `api` · `config`
+`hero` · `about` · `projects` · `skills` · `certifications` · `contact` · `navbar` · `footer` · `seo` · `animations` · `api` · `config`
 
 ### Ejemplos válidos
 

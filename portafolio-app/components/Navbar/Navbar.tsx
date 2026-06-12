@@ -5,11 +5,12 @@ import styles from "./Navbar.module.css";
 
 /* Secciones de navegación */
 const NAV_ITEMS = [
-  { label: "Inicio",    id: "hero" },
-  { label: "Sobre mí", id: "about" },
-  { label: "Skills",   id: "skills" },
-  { label: "Proyectos",id: "projects" },
-  { label: "Contacto", id: "contact" },
+  { label: "Inicio",          id: "hero" },
+  { label: "Sobre mí",        id: "about" },
+  { label: "Skills",          id: "skills" },
+  { label: "Certificaciones", id: "certifications" },
+  { label: "Proyectos",       id: "projects" },
+  { label: "Contacto",        id: "contact" },
 ];
 
 /**

@@ -1,0 +1,229 @@
+/* ============================================================
+   Certifications.module.css — Estilos de Certificaciones y CTF
+   ============================================================ */
+
+.certifications {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    rgba(44, 44, 42, 0.2) 50%,
+    var(--color-bg) 100%
+  );
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* ─── Grid de Tarjetas de Certificación ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-hover, var(--color-accent));
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(127, 119, 221, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform var(--transition-base);
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.badge[data-category="cybersecurity"] {
+  background: rgba(31, 87, 115, 0.2);
+  color: #00b4d8;
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.badge[data-category="networking"] {
+  background: rgba(0, 119, 182, 0.15);
+  color: #a0c4ff;
+  border: 1px solid rgba(160, 196, 255, 0.3);
+}
+
+.badge[data-category="cloud"] {
+  background: rgba(0, 164, 239, 0.15);
+  color: #90e0ef;
+  border: 1px solid rgba(144, 224, 239, 0.3);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  height: 2.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.dot {
+  color: rgba(240, 239, 255, 0.2);
+}
+
+/* ─── Tarjeta CTF Especial (Terminal de Linux) ─── */
+.ctfCard {
+  background: #121214;
+  border: 1px solid rgba(127, 119, 221, 0.3);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card), 0 0 30px rgba(127, 119, 221, 0.1);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.ctfCard:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card), 0 0 40px rgba(127, 119, 221, 0.2);
+}
+
+.terminalHeader {
+  background: #1b1b1f;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(240, 239, 255, 0.05);
+}
+
+.terminalDots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminalDots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminalTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: var(--color-text-muted);
+  margin-right: 36px; /* Para equilibrar los puntos a la izquierda */
+}
+
+.terminalBody {
+  padding: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #a9b1d6;
+  background: #16161a;
+  min-height: 250px;
+}
+
+.consoleLine {
+  margin-bottom: 0.75rem;
+}
+
+.prompt {
+  color: var(--color-accent-soft);
+  font-weight: bold;
+}
+
+.command {
+  color: #fff;
+}
+
+.jsonOutput {
+  color: #79c0ff;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border);
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--color-accent);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .terminalBody {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .certTitle {
+    height: auto;
+    -webkit-line-clamp: initial;
+  }
+}
