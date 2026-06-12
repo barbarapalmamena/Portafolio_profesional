@@ -10,7 +10,7 @@ const PROJECTS = [
     title: "Simulación de Automotora",
     description:
       "Sitio web profesional de venta de vehículos en Puerto Montt y la Décima Región. Incluye un catálogo dinámico con filtros de búsqueda por marca, categoría y presupuesto, secciones informativas de garantía ética de 7 días, inspección rigurosa y un panel de administración.",
-    image: "/images/project-automotora.png",
+    image: "/images/project-automotora-v2.png",
     tech: ["Next.js", "React", "TypeScript", "CSS Modules"],
     status: "completed" as const,
     demoUrl: "https://automotora-eight.vercel.app/",
@@ -21,7 +21,7 @@ const PROJECTS = [
     title: "Iglesia Tupahue",
     description:
       "Sitio web institucional para la Iglesia Reformada Tupahue en Puerto Montt. Cuenta con secciones de actividades, nosotros, ministerios, una biblioteca teológica, integración con YouTube para servicios y estudios bíblicos, feed de Instagram y sistema de inicio de sesión.",
-    image: "/images/project-iglesia.png",
+    image: "/images/project-iglesia-v2.png",
     tech: ["Next.js", "React", "JavaScript", "Supabase", "Resend", "jsPDF", "CSS Modules"],
     status: "completed" as const,
     demoUrl: "https://tupahue-delta.vercel.app/",
