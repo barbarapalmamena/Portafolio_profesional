@@ -3,44 +3,38 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Skills.module.css";
 
-/* Datos de habilidades basados en frontendSkills.md */
+/* Habilidades reales confirmadas por Bárbara */
 const SKILL_CATEGORIES = [
   {
     title: "Frontend Core",
     skills: [
-      { name: "HTML5",       icon: "🌐", level: 90 },
-      { name: "CSS3",        icon: "🎨", level: 85 },
-      { name: "JavaScript",  icon: "⚡", level: 80 },
-      { name: "TypeScript",  icon: "🔷", level: 70 },
-      { name: "Responsive",  icon: "📱", level: 85 },
-      { name: "WCAG A11y",   icon: "♿", level: 75 },
+      { name: "HTML5",      icon: "🌐", level: 90 },
+      { name: "CSS3",       icon: "🎨", level: 85 },
+      { name: "JavaScript", icon: "⚡", level: 80 },
+      { name: "TypeScript", icon: "🔷", level: 70 },
+      { name: "Responsive", icon: "📱", level: 85 },
     ],
   },
   {
     title: "Frameworks & Librerías",
     skills: [
-      { name: "React",       icon: "⚛️",  level: 80 },
-      { name: "Next.js",     icon: "▲",   level: 75 },
-      { name: "Tailwind CSS",icon: "💨",  level: 70 },
+      { name: "React",        icon: "⚛️", level: 80 },
+      { name: "Next.js",      icon: "▲",  level: 75 },
+      { name: "Tailwind CSS", icon: "💨", level: 70 },
     ],
   },
   {
     title: "Diseño UI/UX",
     skills: [
-      { name: "CSS Modules", icon: "🧩", level: 80 },
-      { name: "Figma",       icon: "✏️",  level: 65 },
-      { name: "Animaciones", icon: "✨", level: 75 },
-      { name: "Glassmorphism",icon: "🪟", level: 70 },
+      { name: "CSS Modules",    icon: "🧩", level: 80 },
+      { name: "Animaciones CSS",icon: "✨", level: 75 },
     ],
   },
   {
-    title: "Dev Tools & Calidad",
+    title: "Dev Tools",
     skills: [
-      { name: "Git",         icon: "🌿", level: 80 },
-      { name: "GitHub",      icon: "🐙", level: 80 },
-      { name: "ESLint",      icon: "🔍", level: 70 },
-      { name: "SEO",         icon: "🔎", level: 75 },
-      { name: "Open Graph",  icon: "🔗", level: 70 },
+      { name: "Git",    icon: "🌿", level: 80 },
+      { name: "GitHub", icon: "🐙", level: 80 },
     ],
   },
 ];
