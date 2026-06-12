@@ -130,7 +130,6 @@ export default function Hero() {
 
       {/* Indicador de scroll */}
       <div className={styles.scrollIndicator} aria-hidden="true">
-        <span>scroll</span>
         <div className={styles.scrollLine} />
       </div>
     </section>

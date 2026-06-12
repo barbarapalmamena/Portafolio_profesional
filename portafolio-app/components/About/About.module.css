@@ -59,17 +59,18 @@
 /* Badge de estado */
 .badge {
   position: absolute;
-  bottom: -1rem;
-  right: -1rem;
-  background: var(--color-surface);
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(44, 44, 42, 0.85);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 0.75rem 1.25rem;
+  padding: 0.6rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 2;
 }
 
@@ -190,15 +191,5 @@
   .stats {
     grid-template-columns: 1fr;
     gap: 0.75rem;
-  }
-
-  .badge {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin: 1rem auto 0;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
   }
 }
