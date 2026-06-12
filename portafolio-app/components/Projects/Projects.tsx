@@ -4,29 +4,28 @@ import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Projects.module.css";
 
-/* Datos de proyectos reales */
 const PROJECTS = [
   {
     id: "automotora",
     title: "Simulación de Automotora",
     description:
-      "Sistema web de simulación de una concesionaria de automóviles. Permite gestionar un catálogo de vehículos, realizar búsquedas y filtros, y simular el proceso de compra de manera interactiva.",
+      "Sitio web profesional de venta de vehículos en Puerto Montt y la Décima Región. Incluye un catálogo dinámico con filtros de búsqueda por marca, categoría y presupuesto, secciones informativas de garantía ética de 7 días, inspección rigurosa y un panel de administración.",
     image: "/images/project-automotora.png",
-    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    tech: ["Next.js", "React", "TypeScript", "CSS Modules", "Responsive Design"],
     status: "completed" as const,
-    demoUrl: "#",
-    repoUrl: "#",
+    demoUrl: "https://automotora-eight.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/Automotora",
   },
   {
     id: "iglesia",
     title: "Iglesia Tupahue",
     description:
-      "Sitio web institucional para la Iglesia Tupahue. Diseño moderno y accesible con información de la comunidad, eventos, noticias y medios de contacto. Construido con Next.js para máximo rendimiento y SEO.",
+      "Sitio web institucional para la Iglesia Reformada Tupahue en Puerto Montt. Cuenta con secciones de actividades, nosotros, ministerios, una biblioteca teológica, integración con YouTube para servicios y estudios bíblicos, feed de Instagram y sistema de inicio de sesión.",
     image: "/images/project-iglesia.png",
-    tech: ["Next.js", "React", "TypeScript", "CSS Modules", "SEO"],
+    tech: ["Next.js", "React", "TypeScript", "CSS Modules", "Bootstrap Icons", "SEO Optimization"],
     status: "completed" as const,
-    demoUrl: "#",
-    repoUrl: "#",
+    demoUrl: "https://tupahue-delta.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/Tupahue",
   },
 ];
 
