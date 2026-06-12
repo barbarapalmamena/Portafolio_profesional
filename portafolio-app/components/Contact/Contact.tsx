@@ -115,8 +115,8 @@ export default function Contact() {
             <div className={styles.contactItems}>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}><MdEmail /></span>
-                <a href="mailto:tu.correo@ejemplo.com">
-                  tu.correo@ejemplo.com
+                <a href="mailto:barbarapalmamena@gmail.com">
+                  barbarapalmamena@gmail.com
                 </a>
               </div>
               <div className={styles.contactItem}>
@@ -143,7 +143,7 @@ export default function Contact() {
               </a>
               <a
                 id="contact-linkedin"
-                href="https://linkedin.com/in/tu-usuario"
+                href="https://www.linkedin.com/in/b%C3%A1rbara-javiera-palma-mena-24351026b/"
                 className={styles.socialBtn}
                 target="_blank"
                 rel="noopener noreferrer"
