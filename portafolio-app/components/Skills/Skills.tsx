@@ -3,38 +3,38 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Skills.module.css";
 
-/* Habilidades reales confirmadas por Bárbara */
+/* Niveles de habilidad evaluados por Bárbara */
 const SKILL_CATEGORIES = [
   {
     title: "Frontend Core",
     skills: [
-      { name: "HTML5",      icon: "🌐", level: 90 },
-      { name: "CSS3",       icon: "🎨", level: 85 },
-      { name: "JavaScript", icon: "⚡", level: 80 },
-      { name: "TypeScript", icon: "🔷", level: 70 },
-      { name: "Responsive", icon: "📱", level: 85 },
+      { name: "HTML5",      icon: "🌐", level: 75 },
+      { name: "CSS3",       icon: "🎨", level: 75 },
+      { name: "JavaScript", icon: "⚡", level: 50 },
+      { name: "TypeScript", icon: "🔷", level: 50 },
+      { name: "Responsive", icon: "📱", level: 75 },
     ],
   },
   {
     title: "Frameworks & Librerías",
     skills: [
-      { name: "React",        icon: "⚛️", level: 80 },
+      { name: "React",        icon: "⚛️", level: 50 },
       { name: "Next.js",      icon: "▲",  level: 75 },
-      { name: "Tailwind CSS", icon: "💨", level: 70 },
+      { name: "Tailwind CSS", icon: "💨", level: 75 },
     ],
   },
   {
     title: "Diseño UI/UX",
     skills: [
-      { name: "CSS Modules",    icon: "🧩", level: 80 },
+      { name: "CSS Modules",    icon: "🧩", level: 75 },
       { name: "Animaciones CSS",icon: "✨", level: 75 },
     ],
   },
   {
     title: "Dev Tools",
     skills: [
-      { name: "Git",    icon: "🌿", level: 80 },
-      { name: "GitHub", icon: "🐙", level: 80 },
+      { name: "Git",    icon: "🌿", level: 50 },
+      { name: "GitHub", icon: "🐙", level: 50 },
     ],
   },
 ];
