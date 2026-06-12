@@ -69,7 +69,9 @@ export default function Navbar() {
             onClick={() => scrollTo("hero")}
             aria-label="Ir al inicio"
           >
-            BJP
+            <span className={styles.logoSymbol}>&lt;</span>
+            <span className={styles.logoName}>BJPM</span>
+            <span className={styles.logoSymbol}>/&gt;</span>
           </button>
 
           {/* Links de escritorio */}

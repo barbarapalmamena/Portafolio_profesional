@@ -26,7 +26,9 @@ export default function Footer() {
           onClick={() => scrollTo("hero")}
           aria-label="Volver al inicio"
         >
-          BJP
+          <span className={styles.logoSymbol}>&lt;</span>
+          <span className={styles.logoName}>BJPM</span>
+          <span className={styles.logoSymbol}>/&gt;</span>
         </button>
 
         {/* Copyright */}

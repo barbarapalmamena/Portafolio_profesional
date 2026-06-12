@@ -17,45 +17,41 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
   cursor: pointer;
-  position: relative;
-
-  padding: 0.4rem 1rem;
+  padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(
-    135deg,
-    var(--color-accent) 0%,
-    var(--color-accent-soft) 50%,
-    #ffffff 100%
-  );
-
-  transition: all var(--transition-base);
-}
-
-.logo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-full);
-  background: rgba(127, 119, 221, 0.08);
+  background: rgba(127, 119, 221, 0.07);
   border: 1px solid rgba(127, 119, 221, 0.3);
+  font-family: 'Courier New', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
   transition: all var(--transition-base);
-  z-index: -1;
 }
 
-.logo:hover::before {
-  background: rgba(127, 119, 221, 0.18);
+.logo:hover {
+  background: rgba(127, 119, 221, 0.15);
   border-color: var(--color-accent);
-  box-shadow: 0 0 20px rgba(127, 119, 221, 0.3);
+  box-shadow: 0 0 20px rgba(127, 119, 221, 0.25);
+}
+
+.logoSymbol {
+  color: var(--color-accent);
+  font-weight: 800;
+  transition: color var(--transition-fast);
+}
+
+.logo:hover .logoSymbol {
+  color: var(--color-accent-soft);
+}
+
+.logoName {
+  color: var(--color-text);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0 2px;
 }
 
 .copy {
