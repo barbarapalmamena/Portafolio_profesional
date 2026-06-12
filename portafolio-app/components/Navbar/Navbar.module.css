@@ -165,6 +165,8 @@
   gap: var(--spacing-sm);
   border-bottom: 1px solid var(--color-border);
   animation: fadeIn 0.2s ease;
+  max-height: calc(100vh - var(--navbar-h));
+  overflow-y: auto;
 }
 
 .mobileMenu.open {

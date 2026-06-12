@@ -231,3 +231,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .cardBody {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .comingSoon {
+    padding: var(--spacing-md) var(--spacing-sm);
+    min-height: 220px;
+  }
+}
