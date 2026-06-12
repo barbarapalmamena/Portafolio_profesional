@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { MdEmail, MdLocationPin, MdSchool } from "react-icons/md";
+import { MdSend } from "react-icons/md";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Contact.module.css";
 
@@ -111,17 +114,17 @@ export default function Contact() {
             {/* Items de contacto */}
             <div className={styles.contactItems}>
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>📧</span>
+                <span className={styles.contactIcon}><MdEmail /></span>
                 <a href="mailto:tu.correo@ejemplo.com">
                   tu.correo@ejemplo.com
                 </a>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>📍</span>
+                <span className={styles.contactIcon}><MdLocationPin /></span>
                 <span>Chile</span>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>🎓</span>
+                <span className={styles.contactIcon}><MdSchool /></span>
                 <span>Ingeniería en Informática — Mención Ciencia de Datos</span>
               </div>
             </div>
@@ -130,13 +133,13 @@ export default function Contact() {
             <div className={styles.socialLinks}>
               <a
                 id="contact-github"
-                href="https://github.com/tu-usuario"
+                href="https://github.com/barbarapalmamena"
                 className={styles.socialBtn}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                🐙 GitHub
+                <SiGithub /> GitHub
               </a>
               <a
                 id="contact-linkedin"
@@ -146,7 +149,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                💼 LinkedIn
+                <SiLinkedin style={{ color: "#0A66C2" }} /> LinkedIn
               </a>
             </div>
           </div>
@@ -239,7 +242,7 @@ export default function Contact() {
                   disabled={sending}
                   aria-label="Enviar mensaje"
                 >
-                  {sending ? "Enviando..." : "✉️ Enviar mensaje"}
+                  {sending ? "Enviando..." : <><MdSend /> Enviar mensaje</>}
                 </button>
               </form>
             )}
