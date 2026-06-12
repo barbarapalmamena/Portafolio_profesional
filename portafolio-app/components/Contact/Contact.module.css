@@ -1,0 +1,206 @@
+/* ============================================================
+   Contact.module.css — Sección de contacto
+   ============================================================ */
+
+.contact {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    rgba(44, 44, 42, 0.2) 100%
+  );
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+/* ─── Lado izquierdo: info ─── */
+.infoSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.infoText {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* Items de contacto */
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), color var(--transition-fast);
+}
+
+.contactItem:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.contactItem a {
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+.contactItem a:hover {
+  color: var(--color-accent-soft);
+}
+
+.contactIcon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Redes sociales */
+.socialLinks {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
+}
+
+.socialBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ─── Formulario ─── */
+.form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.input,
+.textarea {
+  padding: 0.85rem 1rem;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.input.error,
+.textarea.error {
+  border-color: #f87171;
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.errorMsg {
+  font-size: 0.75rem;
+  color: #f87171;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Botón enviar */
+.submitBtn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: var(--font-body);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--color-accent-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Mensaje de éxito */
+.successMsg {
+  text-align: center;
+  padding: var(--spacing-md);
+  color: #4ade80;
+  font-weight: 600;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

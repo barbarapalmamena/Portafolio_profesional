@@ -1,0 +1,251 @@
+/* ============================================================
+   Hero.module.css — Sección de presentación principal
+   ============================================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--navbar-h);
+}
+
+/* Fondo con gradiente y patrón de puntos */
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(127, 119, 221, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(175, 169, 236, 0.07) 0%, transparent 60%),
+    var(--color-bg);
+  z-index: 0;
+}
+
+/* Cuadrícula de puntos decorativa */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(240, 239, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+/* ─── Texto izquierdo ─── */
+.textSide {
+  animation: slideInLeft 0.8s ease both;
+}
+
+.greeting {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(127, 119, 221, 0.3);
+  border-radius: var(--radius-full);
+  background: rgba(127, 119, 221, 0.08);
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.nameHighlight {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-soft) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Efecto typewriter */
+.typewriterWrapper {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+  min-height: 2rem;
+}
+
+.typewriterText {
+  color: var(--color-accent-soft);
+  font-weight: 500;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--color-accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cta {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* ─── Imagen derecha ─── */
+.imageSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 0.8s ease 0.2s both;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 340px;
+  height: 340px;
+}
+
+/* Anillo exterior animado */
+.avatarRing {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+    linear-gradient(135deg, var(--color-accent), transparent, var(--color-accent-soft)) border-box;
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(127, 119, 221, 0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Puntos decorativos alrededor */
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.dot1 {
+  width: 12px;
+  height: 12px;
+  top: 10%;
+  right: -5%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.dot2 {
+  width: 8px;
+  height: 8px;
+  bottom: 15%;
+  left: -3%;
+  background: var(--color-accent-soft);
+  animation: float 4s ease-in-out 1s infinite;
+}
+
+.dot3 {
+  width: 6px;
+  height: 6px;
+  top: 60%;
+  right: -8%;
+  opacity: 0.6;
+  animation: float 5s ease-in-out 0.5s infinite;
+}
+
+/* ─── Scroll indicator ─── */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  animation: fadeIn 1s ease 1.5s both;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.2); }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .imageSide {
+    order: -1;
+  }
+
+  .avatarWrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+
+  .greeting {
+    margin: 0 auto var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .avatarWrapper {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,110 @@
+"use client";
+
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import styles from "./Skills.module.css";
+
+/* Datos de habilidades basados en frontendSkills.md */
+const SKILL_CATEGORIES = [
+  {
+    title: "Frontend Core",
+    skills: [
+      { name: "HTML5",       icon: "🌐", level: 90 },
+      { name: "CSS3",        icon: "🎨", level: 85 },
+      { name: "JavaScript",  icon: "⚡", level: 80 },
+      { name: "TypeScript",  icon: "🔷", level: 70 },
+      { name: "Responsive",  icon: "📱", level: 85 },
+      { name: "WCAG A11y",   icon: "♿", level: 75 },
+    ],
+  },
+  {
+    title: "Frameworks & Librerías",
+    skills: [
+      { name: "React",       icon: "⚛️",  level: 80 },
+      { name: "Next.js",     icon: "▲",   level: 75 },
+      { name: "Tailwind CSS",icon: "💨",  level: 70 },
+    ],
+  },
+  {
+    title: "Diseño UI/UX",
+    skills: [
+      { name: "CSS Modules", icon: "🧩", level: 80 },
+      { name: "Figma",       icon: "✏️",  level: 65 },
+      { name: "Animaciones", icon: "✨", level: 75 },
+      { name: "Glassmorphism",icon: "🪟", level: 70 },
+    ],
+  },
+  {
+    title: "Dev Tools & Calidad",
+    skills: [
+      { name: "Git",         icon: "🌿", level: 80 },
+      { name: "GitHub",      icon: "🐙", level: 80 },
+      { name: "ESLint",      icon: "🔍", level: 70 },
+      { name: "SEO",         icon: "🔎", level: 75 },
+      { name: "Open Graph",  icon: "🔗", level: 70 },
+    ],
+  },
+];
+
+/**
+ * Sección de habilidades con:
+ * - Categorías organizadas
+ * - Tarjetas con icono, nombre y barra de nivel
+ * - Efectos hover con glow
+ */
+export default function Skills() {
+  const { ref } = useScrollAnimation();
+
+  return (
+    <section id="skills" className={`section ${styles.skills}`}>
+      <div className="container">
+        {/* Título */}
+        <div className="section-title-wrapper animate-on-scroll" ref={ref}>
+          <h2 className="section-title">Habilidades</h2>
+          <span className="section-divider" />
+          <p className="section-subtitle">
+            Tecnologías y herramientas con las que trabajo y sigo aprendiendo
+          </p>
+        </div>
+
+        {/* Categorías de skills */}
+        <div className={styles.categories}>
+          {SKILL_CATEGORIES.map((category) => (
+            <div key={category.title} className={`${styles.category} animate-on-scroll`}>
+              <h3 className={styles.categoryTitle}>{category.title}</h3>
+
+              <div className={styles.grid} role="list" aria-label={category.title}>
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    id={`skill-${skill.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    className={styles.card}
+                    role="listitem"
+                    aria-label={`${skill.name} — ${skill.level}%`}
+                  >
+                    <span className={styles.cardIcon} aria-hidden="true">
+                      {skill.icon}
+                    </span>
+                    <span className={styles.cardName}>{skill.name}</span>
+                    <div
+                      className={styles.levelBar}
+                      role="progressbar"
+                      aria-valuenow={skill.level}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-label={`Nivel ${skill.level}%`}
+                    >
+                      <div
+                        className={styles.levelFill}
+                        style={{ width: `${skill.level}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

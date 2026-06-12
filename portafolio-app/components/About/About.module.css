@@ -1,0 +1,193 @@
+/* ============================================================
+   About.module.css — Sección "Sobre mí"
+   ============================================================ */
+
+.about {
+  background: var(--color-bg);
+  position: relative;
+}
+
+/* Línea decorativa izquierda */
+.about::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-accent), transparent);
+  opacity: 0.3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+/* ─── Tarjeta de imagen ─── */
+.imageCard {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.imageFrame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 60%,
+    rgba(127, 119, 221, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Badge de estado */
+.badge {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+  animation: pulse-green 2s ease infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 8px rgba(74, 222, 128, 0.5); }
+  50%       { box-shadow: 0 0 16px rgba(74, 222, 128, 0.8); }
+}
+
+.badgeText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ─── Contenido de texto ─── */
+.textSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.intro {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.intro strong {
+  color: var(--color-accent-soft);
+  font-weight: 600;
+}
+
+/* ─── Stats ─── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.statItem {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.statItem:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.statNumber {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ─── Tags de valores ─── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.4rem 1rem;
+  background: rgba(127, 119, 221, 0.1);
+  border: 1px solid rgba(127, 119, 221, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent-soft);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.tag:hover {
+  background: rgba(127, 119, 221, 0.2);
+  border-color: var(--color-accent);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCard {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

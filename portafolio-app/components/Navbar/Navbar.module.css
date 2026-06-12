@@ -1,0 +1,172 @@
+/* ============================================================
+   Navbar.module.css — Barra de navegación fija
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--navbar-h);
+  display: flex;
+  align-items: center;
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* Efecto de fondo al hacer scroll */
+.navbar.scrolled {
+  background: rgba(22, 22, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ─── Logo ─── */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: var(--color-accent-soft);
+}
+
+/* ─── Links de navegación ─── */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+/* Línea animada debajo del link */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--color-text);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+/* ─── Burger menu (móvil) ─── */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+/* Animación del burger cuando está abierto */
+.burger.open .burgerLine:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.open .burgerLine:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burger.open .burgerLine:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Menú móvil ─── */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: var(--navbar-h);
+  left: 0;
+  right: 0;
+  background: rgba(22, 22, 26, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  flex-direction: column;
+  padding: var(--spacing-md) var(--spacing-sm);
+  gap: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+  animation: fadeIn 0.2s ease;
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileLink {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.mobileLink:last-child {
+  border-bottom: none;
+}
+
+.mobileLink:hover,
+.mobileLink.active {
+  color: var(--color-accent-soft);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
