@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import { MdEmail, MdLocationPin, MdSchool } from "react-icons/md";
-import { MdSend } from "react-icons/md";
+import { SiGithub } from "react-icons/si";
+import { MdEmail, MdLocationPin, MdSchool, MdSend } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Contact.module.css";
 
@@ -149,7 +149,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <SiLinkedin style={{ color: "#0A66C2" }} /> LinkedIn
+                <FaLinkedin style={{ color: "#0A66C2" }} /> LinkedIn
               </a>
             </div>
           </div>
