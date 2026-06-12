@@ -7,9 +7,10 @@ import {
   SiGit, SiGithub,
   SiPython, SiMysql, SiPandas, SiNumpy,
   SiScikitlearn, SiTensorflow, SiJupyter,
-  SiBootstrap
+  SiBootstrap, SiWireshark, SiKalilinux,
+  SiDjango, SiFlask
 } from "react-icons/si";
-import { FaChartBar, FaRobot, FaBrain, FaMobileAlt, FaBroom, FaStar, FaFileExcel } from "react-icons/fa";
+import { FaChartBar, FaRobot, FaBrain, FaMobileAlt, FaBroom, FaStar, FaFileExcel, FaShieldAlt, FaLock, FaNetworkWired, FaTerminal, FaSearch } from "react-icons/fa";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import styles from "./Skills.module.css";
 import type { IconType } from "react-icons";
@@ -46,6 +47,8 @@ const SKILL_CATEGORIES: Category[] = [
       { name: "Next.js",      Icon: SiNextdotjs,    level: 75, color: "#F0EFFF" },
       { name: "Tailwind CSS", Icon: SiTailwindcss,  level: 75, color: "#06B6D4" },
       { name: "Bootstrap",    Icon: SiBootstrap,    level: 50, color: "#7952B3" },
+      { name: "Django",       Icon: SiDjango,       level: 50, color: "#092E20" },
+      { name: "Flask",        Icon: SiFlask,        level: 50, color: "#F0EFFF" },
     ],
   },
   {
@@ -78,6 +81,16 @@ const SKILL_CATEGORIES: Category[] = [
       { name: "Estadística",     Icon: FaChartBar,    level: 75, color: "#4ade80" },
       { name: "Excel avanzado",  Icon: FaFileExcel,       level: 50, color: "#217346" },
       { name: "Data Wrangling",  Icon: FaBroom,       level: 75, color: "#AFA9EC" },
+    ],
+  },
+  {
+    title: "Ciberseguridad & Redes",
+    skills: [
+      { name: "Wireshark / Packet Tracer", Icon: SiWireshark, level: 50, color: "#1679A7" },
+      { name: "Kali Linux / Metasploit",   Icon: SiKalilinux, level: 50, color: "#52B6F2" },
+      { name: "Nmap / Zenmap",             Icon: FaSearch, level: 50, color: "#00b4d8" },
+      { name: "Burp Suite / OWASP ZAP",    Icon: FaTerminal, level: 50, color: "#FF6600" },
+      { name: "Firewalls / VPNs",          Icon: FaLock, level: 50, color: "#7F77DD" },
     ],
   },
 ];
