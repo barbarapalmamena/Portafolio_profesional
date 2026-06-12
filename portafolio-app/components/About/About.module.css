@@ -29,6 +29,7 @@
 /* ─── Tarjeta de imagen ─── */
 .imageCard {
   position: relative;
+  width: 100%;
 }
 
 .imageFrame {
@@ -72,6 +73,7 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 2;
+  white-space: nowrap;
 }
 
 .badgeDot {
