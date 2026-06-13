@@ -82,12 +82,44 @@ export default function Contact() {
 
     setSending(true);
 
-    // Simulación de envío (reemplazar con integración real)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "d0c41031-6458-450a-8bf7-10f8a9ee08ba"; // Llave por defecto o configurable
 
-    setSending(false);
-    setSuccess(true);
-    setFormData({ name: "", email: "", message: "" });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Contacto Portafolio: ${formData.name}`,
+          from_name: "Portafolio Profesional",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          message: data.message || "Error al enviar el mensaje. Inténtalo de nuevo.",
+        }));
+      }
+    } catch (err) {
+      setErrors((prev) => ({
+        ...prev,
+        message: "Error de red. Revisa tu conexión e inténtalo de nuevo.",
+      }));
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
