@@ -6,6 +6,17 @@ import styles from "./Projects.module.css";
 
 const PROJECTS = [
   {
+    id: "analisis-pontones",
+    title: "Análisis de Pontones",
+    description:
+      "Plataforma de monitoreo y análisis en tiempo real para pontones salmoneros. Incluye telemetría de boya oceanográfica (viento, oleaje, corrientes), monitoreo de jaulas con alertas de oxígeno, y estimación de ventanas de alimentación y logística mediante un panel interactivo.",
+    image: "/images/project-pontones.png",
+    tech: ["Next.js", "React", "Recharts", "Lucide React", "TypeScript", "Tailwind CSS"],
+    status: "completed" as const,
+    demoUrl: "https://analisis-pontones.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/Analisis-Pontones",
+  },
+  {
     id: "automotora",
     title: "Simulación de Automotora",
     description:
