@@ -13,7 +13,7 @@ const PROJECTS = [
     image: "/images/project-fraude.png",
     tech: ["Next.js", "FastAPI", "Python", "XGBoost", "scikit-learn", "Tailwind CSS"],
     status: "completed" as const,
-    demoUrl: "https://det-fraude-anom-1w9cvekdo-barbarapalmamena-6420s-projects.vercel.app/",
+    demoUrl: "https://det-fraude-anom.vercel.app/",
     repoUrl: "https://github.com/barbarapalmamena/DetFraudeAnom",
   },
   {
