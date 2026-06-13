@@ -6,6 +6,17 @@ import styles from "./Projects.module.css";
 
 const PROJECTS = [
   {
+    id: "det-fraude-anom",
+    title: "Detección de Fraude en Tarjetas",
+    description:
+      "Dashboard interactivo y simulador de detección de transacciones fraudulentas y anomalías en tarjetas de crédito. Desarrollado con un pipeline de Machine Learning utilizando XGBoost y scikit-learn, con un backend en FastAPI para inferencia en tiempo real y una consola moderna en Next.js.",
+    image: "/images/project-fraude.png",
+    tech: ["Next.js", "FastAPI", "Python", "XGBoost", "scikit-learn", "Tailwind CSS"],
+    status: "completed" as const,
+    demoUrl: "https://det-fraude-anom.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/DetFraudeAnom",
+  },
+  {
     id: "analisis-pontones",
     title: "Análisis de Pontones",
     description:
