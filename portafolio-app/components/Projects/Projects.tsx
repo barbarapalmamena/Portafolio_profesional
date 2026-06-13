@@ -9,9 +9,9 @@ const PROJECTS = [
     id: "analisis-pontones",
     title: "Análisis de Pontones",
     description:
-      "Plataforma de monitoreo y análisis en tiempo real para pontones salmoneros. Incluye telemetría de boya oceanográfica (viento, oleaje, corrientes), monitoreo de jaulas con alertas de oxígeno, y estimación de ventanas de alimentación y logística mediante un panel interactivo.",
+      "Plataforma y estudio analítico bajo la metodología CRISP-DM para el monitoreo operativo de pontones salmoneros. Incluye extracción e ingesta de datos con Python (Pandas, Open-Meteo API), análisis exploratorio en Jupyter, estimación de estrés estructural y riesgo logístico, y un dashboard interactivo en tiempo real.",
     image: "/images/project-pontones.png",
-    tech: ["Next.js", "React", "Recharts", "Lucide React", "TypeScript", "Tailwind CSS"],
+    tech: ["Python", "Pandas", "Jupyter", "Next.js", "Recharts", "Open-Meteo API"],
     status: "completed" as const,
     demoUrl: "https://analisis-pontones.vercel.app/",
     repoUrl: "https://github.com/barbarapalmamena/Analisis-Pontones",
