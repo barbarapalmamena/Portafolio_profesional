@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { FaDownload } from "react-icons/fa";
 import styles from "./About.module.css";
+import Counter from "./Counter";
 
 /* Tags de valores personales/profesionales */
 const TAGS = [
@@ -88,15 +89,21 @@ export default function About() {
             {/* Stats */}
             <div className={styles.stats}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>2+</span>
+                <span className={styles.statNumber}>
+                  <Counter target={3} suffix="+" />
+                </span>
                 <span className={styles.statLabel}>Proyectos realizados</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>5+</span>
+                <span className={styles.statNumber}>
+                  <Counter target={15} suffix="+" />
+                </span>
                 <span className={styles.statLabel}>Tecnologías dominadas</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>100%</span>
+                <span className={styles.statNumber}>
+                  <Counter target={100} suffix="%" />
+                </span>
                 <span className={styles.statLabel}>Compromiso</span>
               </div>
             </div>
