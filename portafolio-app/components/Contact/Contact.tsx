@@ -83,7 +83,7 @@ export default function Contact() {
     setSending(true);
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "d0c41031-6458-450a-8bf7-10f8a9ee08ba"; // Llave por defecto o configurable
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "53f3bf58-474e-4f8e-b02b-be47d97f11dd"; // Llave por defecto o configurable
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
