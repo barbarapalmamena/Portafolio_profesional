@@ -194,6 +194,10 @@
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--spacing-sm);
+  }
+
   .navLinks {
     display: none;
   }
