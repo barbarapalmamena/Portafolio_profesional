@@ -49,6 +49,17 @@ const PROJECTS = [
     demoUrl: "https://tupahue-delta.vercel.app/",
     repoUrl: "https://github.com/barbarapalmamena/Tupahue",
   },
+  {
+    id: "esc-part-la-huacha",
+    title: "Escuela Particular N° 240 La Huacha",
+    description:
+      "Sitio web para escuela multigrado en el sector La Huacha, Frutillar. Comprometida con una educación personalizada, inclusiva y gratuita para niños de 1° a 6° básico.",
+    image: "/images/project-escuela.png",
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    status: "completed" as const,
+    demoUrl: "https://esc-part-la-huacha.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/EscPartLaHuacha",
+  },
 ];
 
 /**
