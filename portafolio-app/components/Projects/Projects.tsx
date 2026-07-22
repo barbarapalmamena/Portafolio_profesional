@@ -50,15 +50,26 @@ const PROJECTS = [
     repoUrl: "https://github.com/barbarapalmamena/Tupahue",
   },
   {
-    id: "esc-part-la-huacha",
-    title: "Escuela Particular N° 240 La Huacha",
+    id: "biblioteca-tupahue",
+    title: "Biblioteca Virtual Tupahue",
     description:
-      "Sitio web para escuela multigrado en el sector La Huacha, Frutillar. Comprometida con una educación personalizada, inclusiva y gratuita para niños de 1° a 6° básico.",
-    image: "/images/project-escuela.png",
-    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+      "Plataforma web para la gestión, catálogo y consulta de libros y literatura de la Biblioteca Tupahue. Incluye catálogo interactivo, búsqueda de recursos educativos y teológicos, administración de acervo bibliográfico y diseño adaptativo.",
+    image: "/images/project-biblioteca.jpg",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     status: "completed" as const,
-    demoUrl: "https://esc-part-la-huacha.vercel.app/",
-    repoUrl: "https://github.com/barbarapalmamena/EscPartLaHuacha",
+    demoUrl: "https://biblioteca-tupahue-pearl.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/BibliotecaTupahue",
+  },
+  {
+    id: "nguru",
+    title: "Ngürü — Estudio Creativo",
+    description:
+      "Plataforma web y portafolio interactivo para estudio de producción visual, fotografía comercial, producción de Reels & video corporativo y diseño de branding en Frutillar y el sur de Chile.",
+    image: "/images/project-nguru.jpeg",
+    tech: ["Next.js", "React", "JavaScript", "CSS Modules", "Vercel"],
+    status: "completed" as const,
+    demoUrl: "https://nguruportafolio.vercel.app/",
+    repoUrl: "https://github.com/barbarapalmamena/Nguru",
   },
 ];
 
