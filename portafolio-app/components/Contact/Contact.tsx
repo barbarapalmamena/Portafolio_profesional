@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { SiGithub } from "react-icons/si";
 import { MdEmail, MdLocationPin, MdSchool, MdSend } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -163,16 +162,6 @@ export default function Contact() {
 
             {/* Redes sociales */}
             <div className={styles.socialLinks}>
-              <a
-                id="contact-github"
-                href="https://github.com/barbarapalmamena"
-                className={styles.socialBtn}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <SiGithub /> GitHub
-              </a>
               <a
                 id="contact-linkedin"
                 href="https://www.linkedin.com/in/b%C3%A1rbara-javiera-palma-mena-24351026b/"
