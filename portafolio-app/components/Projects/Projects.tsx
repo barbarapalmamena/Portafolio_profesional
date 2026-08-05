@@ -14,7 +14,6 @@ const PROJECTS = [
     tech: ["Python", "Pandas", "Jupyter", "Next.js", "Recharts", "Open-Meteo API"],
     status: "completed" as const,
     demoUrl: "https://analisis-pontones.vercel.app/",
-    repoUrl: "https://github.com/barbarapalmamena/Analisis-Pontones",
   },
   {
     id: "automotora",
@@ -25,7 +24,6 @@ const PROJECTS = [
     tech: ["Next.js", "React", "TypeScript", "CSS Modules"],
     status: "completed" as const,
     demoUrl: "https://automotora-eight.vercel.app/",
-    repoUrl: "https://github.com/barbarapalmamena/Automotora",
   },
   {
     id: "iglesia",
@@ -36,7 +34,6 @@ const PROJECTS = [
     tech: ["Next.js", "React", "JavaScript", "Supabase", "Resend", "jsPDF", "CSS Modules"],
     status: "completed" as const,
     demoUrl: "https://tupahue-delta.vercel.app/",
-    repoUrl: "https://github.com/barbarapalmamena/Tupahue",
   },
   {
     id: "biblioteca-tupahue",
@@ -47,7 +44,6 @@ const PROJECTS = [
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     status: "completed" as const,
     demoUrl: "https://biblioteca-tupahue-pearl.vercel.app/",
-    repoUrl: "https://github.com/barbarapalmamena/BibliotecaTupahue",
   },
   {
     id: "nguru",
@@ -58,7 +54,6 @@ const PROJECTS = [
     tech: ["Next.js", "React", "JavaScript", "CSS Modules", "Vercel"],
     status: "completed" as const,
     demoUrl: "https://nguruportafolio.vercel.app/",
-    repoUrl: "https://github.com/barbarapalmamena/Nguru",
   },
 ];
 
@@ -112,15 +107,6 @@ export default function Projects() {
                   >
                     🚀 Demo
                   </a>
-                  <a
-                    href={project.repoUrl}
-                    className={`${styles.overlayBtn} ${styles.overlayBtnGhost}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Ver código de ${project.title}`}
-                  >
-                    💻 Código
-                  </a>
                 </div>
               </div>
 
@@ -157,14 +143,6 @@ export default function Projects() {
                     rel="noopener noreferrer"
                   >
                     🔗 Ver demo
-                  </a>
-                  <a
-                    href={project.repoUrl}
-                    className={styles.cardLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    📂 Repositorio
                   </a>
                 </div>
               </div>
