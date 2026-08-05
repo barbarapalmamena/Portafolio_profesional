@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "React",
     "Next.js",
     "Portafolio",
+    "Puerto Montt",
     "Chile",
   ],
   authors: [{ name: "Bárbara Javiera Palma Mena" }],

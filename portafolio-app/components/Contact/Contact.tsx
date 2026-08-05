@@ -82,27 +82,25 @@ export default function Contact() {
     setSending(true);
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "53f3bf58-474e-4f8e-b02b-be47d97f11dd"; // Llave por defecto o configurable
-
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // Envío directo de correo real a barbarapalmamena@gmail.com mediante FormSubmit AJAX
+      const response = await fetch("https://formsubmit.co/ajax/barbarapalmamena@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: accessKey,
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: `Contacto Portafolio: ${formData.name}`,
-          from_name: "Portafolio Profesional",
+          _subject: `Contacto de ${formData.name} desde tu Portafolio`,
+          _captcha: "false",
         }),
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (response.ok && (data.success === "true" || data.success === true || data.ok)) {
         setSuccess(true);
         setFormData({ name: "", email: "", message: "" });
       } else {
@@ -152,7 +150,7 @@ export default function Contact() {
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}><MdLocationPin /></span>
-                <span>Chile</span>
+                <span>Puerto Montt, Chile</span>
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}><MdSchool /></span>
